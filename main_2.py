@@ -1,4 +1,8 @@
 from function import get_todos, write_todos
+import time
+
+now = time.strftime('%b %d, %Y %H:%M:%S')
+print(now)
 
 while True:
     user_action = input('Enter add, show, edit or stop: ')
@@ -12,6 +16,7 @@ while True:
         todos.append(todo + '\n')
 
         write_todos('files/todos.txt', todos)
+
 
     elif user_action.startswith('show'):
 
